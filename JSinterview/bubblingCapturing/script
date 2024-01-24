@@ -1,0 +1,13 @@
+let grand = document.querySelector(".grandparent")
+let parent = document.querySelector(".parent");
+let child = document.querySelector(".child");
+
+
+parent.addEventListener("click",function(){
+    grand.removeChild(parent);
+})
+
+child.addEventListener("click",function(event){
+    event.stopPropagation();
+    child.style.backgroundColor="green";
+})
